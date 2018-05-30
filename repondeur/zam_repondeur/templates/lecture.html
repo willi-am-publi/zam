@@ -27,6 +27,23 @@
         </div>
     </div>
 
+    <div class="card">
+        <div class="card-body">
+            <div class="card-title">
+                <h4>Importer des amendements depuis Krill 🦐</h4>
+            </div>
+            <div class="card-text">
+                <form action="{{ request.route_url('upload_krill', chambre=lecture.chambre, session=lecture.session, num_texte=lecture.num_texte) }}" method="POST" accept-charset="utf-8" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="xls_file">Fichier Excel</label>
+                        <input id="xls_file" name="xls_file" type="file" value="" class="form-control">
+                    </div>
+                    <input type="submit" value="Importer" class="btn btn-primary">
+                </form>
+            </div>
+        </div>
+    </div>
+
 {% endblock %}
 
 
@@ -40,6 +57,9 @@
     }
     a.btn i.fa {
         margin-right: 0.5rem;
+    }
+    .card {
+        margin-bottom: 1rem;
     }
 </style>
 {% endblock %}

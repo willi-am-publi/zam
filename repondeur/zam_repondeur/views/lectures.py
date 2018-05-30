@@ -106,13 +106,12 @@ class LecturesAdd:
 
 @view_config(route_name="lecture", renderer="lecture.html")
 def lecture(request: Request) -> dict:
-    return {
-        "lecture": Lecture(  # type: ignore
-            chambre=request.matchdict["chambre"],
-            session=request.matchdict["session"],
-            num_texte=request.matchdict["num_texte"],
-        )
-    }
+    lecture = Lecture(  # type: ignore
+        chambre=request.matchdict["chambre"],
+        session=request.matchdict["session"],
+        num_texte=request.matchdict["num_texte"],
+    )
+    return {"lecture": lecture}
 
 
 @view_config(route_name="amendements_csv")

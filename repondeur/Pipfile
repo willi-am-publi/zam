@@ -13,6 +13,8 @@ bleach = "*"
 openpyxl = "*"
 dataclasses = "*"
 "4f547c1" = {path = "./../aspirateur", editable = true}
+xlrd = "*"
+"6901425" = {path = "./../visionneuse", editable = true}
 
 [dev-packages]
 webtest = "*"

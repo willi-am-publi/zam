@@ -25,6 +25,9 @@ def make_app(global_settings: dict, **settings: dict) -> Router:
             "amendements_xlsx",
             "/lectures/{chambre}/{session}/{num_texte}/amendements.xlsx",
         )
+        config.add_route(
+            "upload_krill", "/lectures/{chambre}/{session}/{num_texte}/upload_krill"
+        )
 
         config.scan()
 
