@@ -245,5 +245,5 @@ def test_fetch_amendements_with_errored(app, lecture_an, article1, amendements_a
 
     assert amendements == []
     assert created == 0
-    assert errored == ['666', '777', '999']
+    assert errored == ["666", "777", "999"]
     assert DBSession.query(Amendement).count() == len(amendements_an) == 2
